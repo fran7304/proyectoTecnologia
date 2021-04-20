@@ -35,3 +35,10 @@ li a:hover{
 .accion:hover .mostar{
     display: block;
 }
+footer{
+    overflow: hidden;
+    background-color: darkturquoise;
+    font-size: 15px;
+    padding: 43px;
+    
+}
