@@ -1,0 +1,37 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+ul{
+    list-style: none;
+    font-size: 25px;
+    overflow: hidden;
+    background-color: darkturquoise;
+} 
+li{
+    float: left;
+}
+li a{
+    text-decoration: none;
+    color: #666;
+    padding: 43px;
+    display: block;
+}
+.actual{
+    background-color: rgb(69, 197, 197);
+    color: white; 
+    box-sizing: border-box;
+}
+li a:hover{
+    background-color: cyan;
+    color: darkgrey;
+}
+.mostar{
+    position: absolute;
+    overflow: hidden;
+    display:none;
+    background-color: darkturquoise;
+}
+.accion:hover .mostar{
+    display: block;
+}
