@@ -10,6 +10,7 @@ ul{
 } 
 li{
     float: left;
+    display: block;
 }
 li a{
     text-decoration: none;
@@ -40,5 +41,6 @@ footer{
     background-color: darkturquoise;
     font-size: 15px;
     padding: 43px;
-    
+    display: block;
+
 }
