@@ -39,8 +39,10 @@ li a:hover{
 footer{
     overflow: hidden;
     background-color: darkturquoise;
-    font-size: 15px;
+    font-size: 10px;
     padding: 43px;
     display: block;
-
+}
+footer h2{
+   text-align: left;
 }
