@@ -7,6 +7,7 @@ ul{
     font-size: 25px;
     overflow: hidden;
     background-color: darkturquoise;
+    text-align: center;
 } 
 li{
     float: left;
@@ -17,6 +18,7 @@ li a{
     color: #666;
     padding: 43px;
     display: block;
+    
 }
 .actual{
     background-color: rgb(69, 197, 197);
@@ -42,7 +44,9 @@ footer{
     font-size: 10px;
     padding: 43px;
     display: block;
+    
 }
 footer h2{
-   text-align: left;
+ text-align: left;
+ 
 }
