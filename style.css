@@ -16,7 +16,7 @@ li{
 li a{
     text-decoration: none;
     color: #666;
-    padding: 43px;
+    padding: 40px;
     display: block;
     
 }
@@ -28,6 +28,7 @@ li a{
 li a:hover{
     background-color: cyan;
     color: darkgrey;
+
 }
 .mostar{
     position: absolute;
@@ -42,11 +43,15 @@ footer{
     overflow: hidden;
     background-color: darkturquoise;
     font-size: 10px;
-    padding: 43px;
+    padding: 40px;
     display: block;
     
 }
 footer h2{
  text-align: left;
  
+}
+section {
+    border: solid;
+    border-width:0.01em;
 }
