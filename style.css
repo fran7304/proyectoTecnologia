@@ -51,7 +51,12 @@ footer h2{
  text-align: left;
  
 }
-section {
-    border: solid;
-    border-width:0.01em;
+section  {
+    border-style: solid;
+    border-radius: 5rem;
+    border-color: cyan;
+    margin: 5px;
+}
+h1 {
+    color: floralwhite;
 }
