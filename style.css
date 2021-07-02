@@ -11,7 +11,7 @@ ul{
 } 
 li{
      float: left;
-    /*display: block;*/
+   
 }
 li a{
     text-decoration: none;
@@ -22,7 +22,7 @@ li a{
 .actual{
     background-color: rgb(69, 197, 197);
     color: white; 
-    /*box-sizing: border-box;*/
+    
 }
 li a:hover{
     background-color: cyan;
@@ -89,7 +89,6 @@ li a:hover{
 
 .contenedor {
     width: 100%;
-    /*display: flex;*/
     justify-content: center;
     align-items: center;
     height: 50vh;
@@ -141,6 +140,7 @@ figure img{
 .aparicion{
     visibility: visible;
 }
+  /*apartado*/
 h3{
     color: ivory;
     font-size: 35px;
