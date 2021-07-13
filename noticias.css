@@ -1,0 +1,128 @@
+/*registro*/
+.registro{
+    padding: 2px;
+    border: solid;
+    border-radius: 4px;
+    background-color:rgba(84, 238, 230, 0.5);
+    color: rgba(30, 236, 236, 0.89);
+    
+}
+
+.btn-neon{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: rgba(252, 253, 252, 0.959);
+    letter-spacing: 4px;
+    font-size: 24px;
+    text-decoration: none;
+    overflow: hidden;   
+    transition: 0.2s;
+}
+.btn-neon:hover{
+    background: #75e3f1;
+    box-shadow: 0 0 10px #69e4de, 0 0 40px #6ed2e4;
+    transition: 1s;
+
+}
+.btn-neon span{
+    position: absolute;
+    display: block;
+}
+#span1{
+    top: 0%;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#7fe999);
+}
+.btn-neon:hover #span1{
+    left: 100%;
+    transition: 1s;
+}
+
+#span3{
+    bottom: 0%;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#5de289);
+}
+.btn-neon:hover #span3{
+    right: 100%;
+    transition: 0.5s;
+}
+
+#span2{
+    top: -100%;
+    right: 0%;
+    width: 2px;
+    height:100%;
+    background: linear-gradient(180deg,transparent,#41dce7);
+}
+.btn-neon:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition: 0.25s;
+}
+
+#span4{
+    bottom: -100%;
+    left: 0%;
+    width: 2px;
+    height:100%;
+    background: linear-gradient(180deg,transparent,#5cdfc2);
+}
+.btn-neon:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition: 0.75s;
+}
+/* */
+.actu{
+    margin: 20px;
+    border: solid;
+    border-color: rgba(12, 11, 12, 0);
+    background-color:rgba(12, 11, 12, 0.65);
+    font-style: oblique;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: blanchedalmond;
+}
+.noticiapadre{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+
+}
+.noticiag{
+    margin: 20px;
+    border: solid;
+    border-radius: 5px;
+    border-color: rgba(12, 11, 12, 0);
+    background-color:rgba(12, 11, 12, 0.65);
+    font-style: oblique;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: blanchedalmond;
+}
+.link{
+    font-size: 20px;
+}
+.med{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+.def{
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.noticiamayor{
+    margin: 7%;
+    padding: 5%;
+    border: solid;
+    border-radius: 5px;
+    border-color: rgba(12, 11, 12, 0);
+    background-color:rgba(12, 11, 12, 0.65);
+    font-style: oblique;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: blanchedalmond;
+
+}

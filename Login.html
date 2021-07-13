@@ -8,13 +8,32 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
+
+  <header>
+    <nav>  
+        <ul>
+            <li><a class="actual" href="index.html">INICIO</a></li>
+            <li class="accion"><a href="#">CATEGORIA</a>
+               <div class="mostrar">
+                   <a href="tecnologiaAmbiental.html">TEC. AMBIENTAL</a>
+                   <a href="TecnoInfor.html">TEC. INFORMATICA</a>
+                   <a href="tecnologiaMedica.html">TEC. MEDICINA</a>
+                   </div>
+            </li>
+            <li><a href="noticias.html">NOTICIAS</a></li> 
+        </ul>
+    </nav>
+</header><br> 
+
+
+
     <form>
         <h1 class="registro">REGISTRARSE</h1><br>
         <input type="email" id="email" placeholder="colocar email"><br><br><br>
         <input type="password" id="password" placeholder="colocar contraseña"><br><br><br>
         <button onclick="enviar()">ENVIAR</button><br><br><br><br><br> 
-      
-    </form>
+      </form>  
+   
           
    
         <h1 id="login"></h1>
@@ -23,7 +42,7 @@
         <input type="email" id="emailL" placeholder="colocar email"><br><br><br>
         <input type="password" id="passwordL" placeholder="colocar contraseña"><br><br><br>
         <button onclick="INGRESAR()">ENVIAR</button><br><br><br>
-
+    
           
     
 <!-- The core Firebase JS SDK is always required and must be listed first -->
