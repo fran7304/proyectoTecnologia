@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REGISTRATE</title>
     <link href="style.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
 </head>
-<body>
+<body background="https://th.bing.com/th/id/R.de911b9c094305879ff59fafeebf4583?rik=IUQylt8fZbuITg&riu=http%3a%2f%2f1.bp.blogspot.com%2f-KkQFuuaUt8g%2fUZT8Xp4b3II%2fAAAAAAAABco%2fMhP-JMFuJTE%2fs1600%2fMarsRetrog1.gif&ehk=PirRVdEjKgC9RGOP9bq3e%2buknTTXamT3aUZIWbWAWuo%3d&risl=&pid=ImgRaw">
 
   <header>
     <nav>  
@@ -25,26 +26,25 @@
     </nav>
 </header><br> 
 
-
-
-    <form>
-        <h1 class="registro">REGISTRARSE</h1><br>
-        <input type="email" id="email" placeholder="colocar email"><br><br><br>
-        <input type="password" id="password" placeholder="colocar contraseña"><br><br><br>
-        <button onclick="enviar()">ENVIAR</button><br><br><br><br><br> 
-      </form>  
+      <div class="login">
+           <form>
+               <h1 class="registro">REGISTRARSE</h1><br>
+               <input type="email" id="email" placeholder="colocar email"><br><br><br>
+               <input type="password" id="password" placeholder="colocar contraseña"><br><br><br>
+               <button onclick="enviar()">ENVIAR</button><br><br><br><br><br> 
+             </form>  
    
           
    
-        <h1 id="login"></h1>
+               <h1 id="login"></h1>
       
-        <h1>INICIAR SESION</h1><br>
-        <input type="email" id="emailL" placeholder="colocar email"><br><br><br>
-        <input type="password" id="passwordL" placeholder="colocar contraseña"><br><br><br>
-        <button onclick="INGRESAR()">ENVIAR</button><br><br><br>
+               <h1>INICIAR SESION</h1><br>
+               <input type="email" id="emailL" placeholder="colocar email"><br><br><br>
+               <input type="password" id="passwordL" placeholder="colocar contraseña"><br><br><br>
+               <button onclick="INGRESAR()">ENVIAR</button><br><br><br>
     
           
-    
+      </div>   
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
@@ -75,9 +75,9 @@
     var email = user.email;
     var emailVerified = user.emailVerified;
     if(emailVerified ===false){
-      textVer = "correo no verificado"
+      textVer = " correo no verificado"
     } else {
-      textVer = "correo verificado"
+      textVer = " correo verificado"
     }
 
 
@@ -86,11 +86,11 @@
     var isAnonymus = user.isAnonymus;
     var providerData = user.providerData;
     var uid = user.uid;
-    document.getElementById('login').innerHTML = `<p> Estas logeado`
+    document.getElementById('login').innerHTML = `<p> Estas logeado `
  + user.email +  `` +  textVer + `<p>  <button onclick="cerrarSesion()">CERRAR</button><br><br><br>`;
     console.log(user);
   } else {
-    document.getElementById('login').innerHTML = "No estas logeado";
+    document.getElementById('login').innerHTML = " No estas logeado ";
     
   }
 });
