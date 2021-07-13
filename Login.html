@@ -8,22 +8,141 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="login">
+    <form>
+        <h1>REGISTRARSE</h1><br>
+        <input type="email" id="email" placeholder="colocar email"><br><br><br>
+        <input type="password" id="password" placeholder="colocar contraseña"><br><br><br>
+        <button onclick="enviar()">ENVIAR</button><br><br><br><br><br> 
+      
+    </form>
+          
+   
+        <h1 id="login"></h1>
+      
+        <h1>INICIAR SESION</h1><br>
+        <input type="email" id="emailL" placeholder="colocar email"><br><br><br>
+        <input type="password" id="passwordL" placeholder="colocar contraseña"><br><br><br>
+        <button onclick="INGRESAR()">ENVIAR</button><br><br><br>
 
-        <h1>INICIAR SESION</h1>
-        <form >
-            <label for="surname">Usurname</label>
-            <input type="text" placeholder="Enter Usuename">
-
-            <label for="password">Password</label>
-            <input type="password" placeholder="Password">
-
-            <input type="submit" value="Accede">
-
-            <a href="Registrate aquí"></a>
-        
-        </form>
-    </div>
+          
     
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBGr4fibU_oNpJ4S977bsdnCLujjLccKgc",
+    authDomain: "farkk-connecting-world.firebaseapp.com",
+    projectId: "farkk-connecting-world",
+    storageBucket: "farkk-connecting-world.appspot.com",
+    messagingSenderId: "9983802006",
+    appId: "1:9983802006:web:44d532d29fd7806b72e0b7",
+    measurementId: "G-YFC33CSL4W"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    var displayName = user.displayName;
+    var email = user.email;
+    var emailVerified = user.emailVerified;
+    if(emailVerified ===false){
+      textVer = "correo no verificado"
+    } else {
+      textVer = "correo verificado"
+    }
+
+
+
+    var photoURl = user.photoURl;
+    var isAnonymus = user.isAnonymus;
+    var providerData = user.providerData;
+    var uid = user.uid;
+    document.getElementById('login').innerHTML = `<p> Estas logeado`
+ + user.email +  `` +  textVer + `<p>  <button onclick="cerrarSesion()">CERRAR</button><br><br><br>`;
+    console.log(user);
+  } else {
+    document.getElementById('login').innerHTML = "No estas logeado";
+    
+  }
+});
+
+  function enviar() {
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    
+   // alert("email " + email + "password " +  password);
+
+   firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then((userCredential) => {
+    // Signed in
+    var user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ..
+    alert(errorMessage);
+  }) 
+  .then(function() {
+    verificarCorreo();
+  });
+  }
+
+  function INGRESAR() {
+    var emailL = document.getElementById('emailL').value;
+    var passwordL = document.getElementById('passwordL').value;
+    
+   // alert("email " + email + "password " +  password);
+
+   firebase.auth().signInWithEmailAndPassword(emailL, passwordL)
+  .then((userCredential) => {
+    // Signed in
+    var user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    alert(errorMessage);
+  });
+ 
+}
+  function verificarCorreo() {
+   
+    firebase.auth().currentUser.sendEmailVerification()
+  .then(() => {
+    // Email verification sent!
+    // ...
+    alert("Email verificado sent!")
+  });
+  }
+function cerrarSesion(){
+ // firebase.auth().signOut()
+ // .then(function () {
+ //   console,log("salir");
+ // })
+ // .catch(function (error) {
+ //   console.log(error);
+//  })
+
+  firebase.auth().signOut().then(() => {
+    console,log("salir");
+}).catch((error) => {
+  console.log(error);
+});
+}
+</script>
+
 </body>
 </html>
