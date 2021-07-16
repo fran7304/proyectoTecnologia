@@ -125,4 +125,17 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: blanchedalmond;
 
+}.link{
+    margin: 10px;
+    padding: 10px;
+    color: rgba(255, 140, 0, 0.541);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+}
+.imgnoticia{
+    margin: 10px;
+    padding: 10px;
+    border: solid;
+    border: 5px 0px 2px 3px;
+    
 }
